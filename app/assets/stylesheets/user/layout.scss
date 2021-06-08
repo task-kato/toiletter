@@ -1,9 +1,9 @@
-@import "colors";
+@import "user/colors";
 @import "dimensions";
 
 html, body {
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: $beige;
+    background-color: $white;
     margin: 0;
     padding: 0;
 }
@@ -29,6 +29,5 @@ html, body {
 
 
 body {
-    color: $blue;
 }
 
