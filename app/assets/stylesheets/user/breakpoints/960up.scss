@@ -1,0 +1,18 @@
+.user_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .left {
+        width: 20%;
+    }
+
+    .right {
+        width: 50%;
+        margin-top: 0px;
+        .header__ul {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
