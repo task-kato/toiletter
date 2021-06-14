@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_050256) do
     t.boolean "suspended", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
