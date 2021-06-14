@@ -1,5 +1,5 @@
-@import "dimensions";
-@import "user/colors";
+@import "shared/dimensions";
+@import "shared/colors";
 @import "font-awesome";
 
 // ヘッダー
@@ -15,6 +15,8 @@
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    background-color: $white;
+    z-index: 999;
 
     // アイコン+アプリ名
     .left {
@@ -71,3 +73,56 @@
         }
     }
 }
+
+// トップページ・ボディ
+
+.top-page_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .left {
+        color: $blue;
+        .title {
+            font-size: 16px;
+        }
+        .explanation {
+            font-size: 12px;
+            font-weight: bold;
+
+        }
+        .left_login-btn {
+            margin: 20px auto;
+            .login-btn {
+                margin: 0 auto;
+                display: block;
+                width: 180px;
+                text-align: center;
+                border: 2px solid $blue;
+                font-size: 16px;
+                color: $blue;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 8px 16px;
+                border-radius: 4px;
+                transition: .4s;
+                &:hover {
+                    background-color: $blue;
+                    border-color: $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .right {
+        margin: 0 auto;
+        img {
+            width: 150px;
+            height: auto;
+        }
+        
+    }
+}
+

@@ -1,14 +1,20 @@
 <header class="user_header">
   <div class="left">
-    <span class="logo-mark">
-      <i class="fas fa-toilet-paper"></i>
-      toiletter
-    </span>
+    <%= link_to user_root_path, class: "link link_style_none" do %>
+      <span class="logo-mark">
+        <i class="fas fa-toilet-paper"></i>
+        toiletter
+      </span>
+    <% end %>  
   </div>
   <nav class="right">
     <ul calss="header__ul">
-      <li class="header_nav_list"><%= link_to "トイレを探す", "#", class: "header_link" %></li>
-      <li class="header_nav_list"><%= link_to "ログイン", "#", class: "header_link" %></li>
+      <li><%= link_to "トイレを探す", "#", class: "header_link" %></li>
+      <li>
+        <%= link_to "#", class: "header_link" do %>
+          ログイン
+        <% end %>
+      </li>
     </ul>
   </nav>
 </header>

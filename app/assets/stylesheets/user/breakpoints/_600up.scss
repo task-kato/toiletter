@@ -1,0 +1,28 @@
+.top-page_container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        .title {
+            font-size: 20px;
+        }
+        .explanation {
+            font-size: 15px;
+        }
+        .left_login-btn {
+            margin-top: 50px;
+
+        }
+
+    }
+
+    .right {
+        width: 30%;
+
+    }
+}

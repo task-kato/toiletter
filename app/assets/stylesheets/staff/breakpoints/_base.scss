@@ -1,9 +1,9 @@
-@import "dimensions";
-@import "staff/colors";
+@import "shared/dimensions";
+@import "shared/colors";
 @import "font-awesome";
 
 // ヘッダー
-.user_header {
+.staff_header {
     position: fixed;
     top: 0;
     left: 0;
@@ -26,6 +26,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        .link {
+            color: $navy_blue;
+        }
 
         .logo-mark {
             padding-top: 10px;
@@ -66,6 +70,27 @@
                 }
                 &:hover::after{
                     width: 100%;
+                }
+            }
+
+            .header_link {
+                display: block;
+                text-decoration: none;
+                height:35px;
+                width: 120px;
+                line-height: 37px;
+                text-align: center;
+                color: #2bb6c1;
+                border:solid 1px #2bb6c1;
+                border-radius: 20px;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -o-transition: 0.3s;
+                -ms-transition: 0.3s;
+                transition: 0.3s;
+                &:hover {
+                    background: #2bb6c1;
+                    color: #fff;
                 }
             }
         }
