@@ -1,0 +1,38 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.7
+  TargetRailsVersion: 6.1
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+
+Rails:
+  Enabled: true
+
+Rails/FilePath:
+  Exclude:
+    - 'lib/tasks/dev.rake'
+    - 'spec/rails_helper.rb'  
+
+## 日本語コメントを許可します。
+Style/AsciiComments:
+  Enabled: false
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Layout/CommentIndentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true  
