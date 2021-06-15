@@ -15,7 +15,12 @@
   </head>
 
   <body>
+    <% if request.path == '/user/login' %>
+      <%= render "user/shared/login_header" %>
+    <% else %>
       <%= render "user/shared/header" %>
+    <% end %>
+      <%=  %>  
       <div id="container">
         <%= yield %>
       </div>

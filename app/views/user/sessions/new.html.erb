@@ -1,0 +1,23 @@
+<% @title = "ログイン" %>
+
+<div id="login-form">
+  <div class="login-form__group title">
+    <p><i class="fas fa-user"></i></p>
+    <p>ユーザーログイン</p> 
+  </div>
+
+  <%= form_with model: @user_login_form, url: :user_session do |f| %>
+    <div class="login-form__group">
+      <%= f.label :email, "メールアドレス" %>
+      <%= f.text_field :email, placeholder: "メールアドレスを入力" %>
+    </div>
+    <div class="login-form__group">
+      <%= f.label :password, "パスワード" %>
+      <%= f.password_field :password, placeholder: "パスワードを入力" %>
+    </div>
+    <div class="login-form__group">
+      <%= f.submit "ログインする", class: "btn-login" %>
+    </div>
+  <% end %>
+
+</div>

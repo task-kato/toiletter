@@ -10,17 +10,6 @@
   <nav class="right">
     <ul calss="header__ul">
       <li><%= link_to "トイレを探す", "#", class: "header_link" %></li>
-      <li>
-      <% if current_user %>
-        <%= link_to user_session_path, method: :delete, class: "header_link" do %>
-          ログアウト
-        <% end %>  
-      <% else %>
-        <%= link_to user_login_path, class: "header_link" do %>
-          ログイン
-        <% end %>
-      <% end %>  
-      </li>
     </ul>
   </nav>
 </header>
