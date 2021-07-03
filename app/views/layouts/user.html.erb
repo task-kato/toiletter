@@ -15,13 +15,15 @@
   </head>
 
   <body>
+<%# ヘッダー切り替え %>
     <% if request.path == '/user/login' %>
       <%= render "user/shared/login_header" %>
     <% else %>
       <%= render "user/shared/header" %>
     <% end %>
-      <%=  %>  
       <div id="container">
+       <%= content_tag(:span, flash.notice) if flash.notice %>
+       <%= content_tag(:span, flash.alert) if flash.alert %>
         <%= yield %>
       </div>
       <%= render "user/shared/footer" %>

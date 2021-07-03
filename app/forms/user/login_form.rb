@@ -1,5 +1,6 @@
-class User::LoginForm 
-    include ActiveModel::Model 
+class User::LoginForm
 
-    attr_accessor :email, :password 
+  include ActiveModel::Model
+  attr_accessor :email, :password
+
 end
