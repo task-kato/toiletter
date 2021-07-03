@@ -1,33 +1,53 @@
-@import "user/colors";
-@import "dimensions";
 
+// 色
+@import "shared/colors";
+
+// 寸法
+@import "shared/dimensions";
+
+
+
+// デフォルト設置
 html, body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: $white;
-    margin: 0;
-    padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+#container {
+  width: 90%;
+  margin: $navheight auto 0;
 }
 
-@import "breakpoints/base";
-  
+// 共通レイアウト
+.link_style_none {
+  text-decoration: none;
+}
+// レスポンシブ
 
-// @media (min-width: 480px) {
-//   @import "breakpoints/480up";
-// }
+@media (max-width: 479px) {
+  @import "user/breakpoints/base";
+}
+// レスポンシブ
+@media (min-width: 480px) {
+  @import "user/breakpoints/480up";
+}
 
-// @media (min-width: 600px) {
-//   @import "breakpoints/600up";
-// }
+@media (min-width: 600px) {
+  @import "user/breakpoints/600up";
+}
 
 @media (min-width: 960px) {
-  @import "breakpoints/960up";
+  @import "user/breakpoints/960up";
 }
 
-// @media (min-width: 1280px) {
-//   @import "breakpoints/1280up";
-// }
-
-
-body {
+@media (min-width: 1280px) {
+  @import "user/breakpoints/1280up";
 }
+
+
+
+
+
+
 

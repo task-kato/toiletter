@@ -1,0 +1,33 @@
+.top-page_container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .left {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        .title {
+            font-size: 24px;
+        }
+        .explanation {
+            font-size: 18px;
+        }
+        .left_login-btn {
+            margin-top: 50px;
+
+        }
+
+    }
+
+    .right {
+        width: 30%;
+        img {
+            width: 200px;
+            height: auto;
+        }
+
+    }
+}

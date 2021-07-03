@@ -1,0 +1,229 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.7
+  TargetRailsVersion: 6.1
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'node_modules/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'config/**/*'
+    - 'app/helpers/*' 
+
+Rails:
+  Enabled: true
+
+Rails/FilePath:
+  Exclude:
+    - 'lib/tasks/dev.rake'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
+    - 'config/**/*'
+ 
+
+## 日本語コメントを許可します。
+Style/AsciiComments:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+  
+Style/BlockComments:
+  Enabled: false
+  
+Style/RedundantFetchBlock:
+  SafeForConstants: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets  
+
+Style/PercentLiteralDelimiters:
+  Enabled: false 
+  
+## クラス名をネストさせずコンパクトに記述できるように
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact  
+  Exclude:
+    - 'app/channels/**/*'
+
+
+Style/ArgumentsForwarding:
+   Enabled: true 
+   
+Style/CollectionCompact: 
+   Enabled: true 
+   
+Style/DocumentDynamicEvalDefinition: 
+   Enabled: true 
+   
+Style/EndlessMethod:
+   Enabled: true 
+   
+Style/HashConversion:
+   Enabled: true 
+   
+Style/HashExcept: 
+  Enabled: true
+  
+Style/IfWithBooleanLiteralBranches: 
+  Enabled: true 
+  
+Style/InPatternThen:
+  Enabled: true 
+  
+Style/MultilineInPatternThen:
+  Enabled: true 
+  
+Style/NegatedIfElseCondition: 
+  Enabled: true 
+  
+Style/NilLambda:
+  Enabled: true 
+  
+Style/QuotedSymbols:
+  Enabled: true
+  
+Style/RedundantArgument:
+  Enabled: true 
+  
+Style/StringChars:
+  Enabled: true 
+  
+Style/SwapValues: 
+  Enabled: true
+
+
+Layout/IndentationConsistency:
+  EnforcedStyle: indented_internal_methods
+
+Layout/CommentIndentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true  
+
+Layout/EmptyLinesAroundBlockBody:
+  EnforcedStyle: empty_lines
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+  Enabled: false
+
+Layout/SpaceBeforeBrackets:
+  Enabled: true
+
+## クラス名の最初と最後に空の行をつける
+Layout/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+## １行の長さ
+Layout/LineLength:
+  Max: 150  
+
+
+Lint/DuplicateRegexpCharacterClassElement:
+  Enabled: true 
+
+Lint/EmptyBlock:
+  AllowComments: true
+
+Lint/AmbiguousAssignment:
+  Enabled: true
+
+Lint/DeprecatedConstants:
+  Enabled: true 
+
+Lint/DuplicateBranch:
+  Enabled: true 
+
+Lint/EmptyClass:
+  Enabled: true 
+
+Lint/EmptyInPattern:
+  Enabled: true 
+
+Lint/LambdaWithoutLiteralBlock:
+  Enabled: true 
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true 
+
+Lint/NumberedParameterAssignment:
+  Enabled: true 
+
+Lint/OrAssignmentToConstant:
+  Enabled: true
+
+Lint/RedundantDirGlobSort:
+  Enabled: true 
+
+Lint/SymbolConversion: 
+  Enabled: true 
+  
+Lint/ToEnumArguments: 
+  Enabled: true 
+  
+Lint/TripleQuotes:
+   Enabled: true 
+   
+Lint/UnexpectedBlockArity: 
+  Enabled: true 
+  
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+
+Metrics/BlockLength:
+  CountComments: false
+  Exclude:
+    - 'Guardfile'
+    - 'config/routes.rb'
+    - 'spec/**/*'
+    - 'app/views/**/*.jbuilder'
+    - 'lib/tasks/dev.rake'
+
+Rails/HelperInstanceVariable:
+  Enabled: true
+  
+Rails/ActiveRecordCallbacksOrder:
+  Enabled: true 
+  
+Rails/AfterCommitOverride:
+  Enabled: true 
+  
+Rails/AttributeDefaultBlockValue:
+  Enabled: true 
+
+Gemspec/DateAssignment:
+  Enabled: true   
+
+RSpec/DescribedClass:
+  Enabled: false 
+
+RSpec/EmptyExampleGroup:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/AccessModifierDeclarations:
+  Enabled: false
+
+Style/SafeNavigation: 
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false 
+
+Metrics/AbcSize: 
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+

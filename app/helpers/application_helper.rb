@@ -1,9 +1,9 @@
 module ApplicationHelper
-    def document_title 
-        if @title.present? 
-            "#{@title}"
-        else
-            "Toiletter"
-        end
+  def document_title
+    if @title.present?
+      @title.to_s
+    else
+      'Toiletter'
     end
+  end
 end

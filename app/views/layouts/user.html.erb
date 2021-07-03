@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= document_title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,8 +15,15 @@
   </head>
 
   <body>
+<%# ヘッダー切り替え %>
+    <% if request.path == '/user/login' %>
+      <%= render "user/shared/login_header" %>
+    <% else %>
       <%= render "user/shared/header" %>
+    <% end %>
       <div id="container">
+       <%= content_tag(:span, flash.notice) if flash.notice %>
+       <%= content_tag(:span, flash.alert) if flash.alert %>
         <%= yield %>
       </div>
       <%= render "user/shared/footer" %>
