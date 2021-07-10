@@ -1,194 +1,84 @@
-@import "shared/dimensions";
 @import "shared/colors";
-@import "font-awesome";
 
-// ヘッダー
-.user_header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: $navheight;
-    width: 100%;
-    z-index: 99;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $white;
-    z-index: 999;
-
-    // アイコン+アプリ名
-    .left {
-        font-family: 'Baloo Tammudu 2', cursive;
-        font-size: 30px;
-        width: 100%;
-        font-weight: 700;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .logo-mark {
-            padding-top: 10px;
-            margin: 0 auto;
-            color: $blue;
-        }
+.user-header {
+    .logo-mark {
+      font-family: 'Baloo Tammudu 2', cursive;
+      font-size: 30px;
+      font-weight: 700;
+      color: $blue;
     }
-
-    .right {
-        width: 100%;
-        margin-top: -20px;
-        font-size: 10px;
-        font-weight: bolder;
-        ul{
-            padding-left: 0px;
-            display: flex;
-            flex-flow: row;
-            justify-content: space-around;
-            list-style: none;
-
-            .header_link {
-                position: relative;
-	            display: inline-block;
-                text-decoration: none;
-                color: $blue;
-                transition: all .3s;
-                &::after{
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    content: '';
-                    width: 0;
-                    height: 3px;
-                    background-color: $blue;
-                }
-                &:hover::after{
-                    width: 100%;
-                }
-            }
-        }
+  
+    .nav-item {
+      margin: 10px;
     }
+  
+    .header-nav-item{
+      color: $blue;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  
 }
 
-// トップページ・ボディ
-
-.top-page_container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    .left {
-        margin: 0 auto;
+.user-top-container {
+    .top-items {
         color: $blue;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+
         .title {
-            font-size: 16px;
+            font-size: clamp(12px, 2.1vw, 24px)
         }
         .explanation {
-            font-size: 10px;
-            font-weight: bold;
-
+            font-size: clamp(12px, 2.1vw, 24px)
         }
-        .left_login-btn {
-            margin: 20px auto;
-            .login-btn {
-                margin: 0 auto;
-                display: block;
-                width: 180px;
-                text-align: center;
-                border: 2px solid $blue;
-                font-size: 16px;
-                color: $blue;
-                text-decoration: none;
-                font-weight: bold;
-                padding: 8px 16px;
-                border-radius: 4px;
-                transition: .4s;
-                &:hover {
-                    background-color: $blue;
-                    border-color: $blue;
-                    color: $white;
-                }
+
+        .login-btn {
+            margin: 0 auto;
+            display: block;
+            width: 180px;
+            text-align: center;
+            border: 2px solid $blue;
+            font-size: 16px;
+            color: $blue;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: .4s;
+            padding: 0px;
+            &:hover {
+                background-color: $blue;
+                border-color: $blue;
+                color: $white;
             }
         }
-    }
-
-    .right {
-        margin: 0 auto;
-        img {
-            width: 150px;
-            height: auto;
-        }
-        
     }
 }
 
+// ユーザーログイン画面
+.user-login-form-container {
+    height: 400px;
+    .user-login-form {
+        width: 600px;
 
-// ログインフォーム
+    }
 
-#login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    max-width: 450px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px auto; 
+    .btn-login {
+        color: $blue;
+        width: 100%;
+        background-color: $white;
+        border: solid 2px $blue;
+        border-radius: 3px;
+        transition: .4s;
+        font-weight: bold;
 
-    .login-form__group {
-        max-width: 400px;
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        margin-top: 15px;
-
-        label {
-            font-size: 10px;
-            color: $light_gray;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            padding: 10px;
-
-            &:focus {
-                border: 2px solid $blue; 
-                outline: none;
-            }
-        
-        }
-
-        .btn-login {
-            display: inline-block;
-            padding: 0.3em 1em;
-            text-decoration: none;
-            color: $blue;
-            border: solid 2px $blue;
-            background-color: $white;
-            border-radius: 3px;
-            transition: .4s;
-            font-weight: bold;
-          }
-          
-          .btn-login:hover {
+        &:hover {
             background: $blue;
             color: $white;
             cursor: pointer;
           }
-    }
-
-    .title {
-        display: flex;
-        flex-direction: row;
-        p:nth-child(1){
-            margin-right: 10px;
-
-        }
+        
     }
 
 }
-

@@ -14,21 +14,18 @@ html, body {
   margin: 0;
   padding: 0;
 }
-#container {
-  width: 90%;
-  margin: $navheight auto 0;
-}
 
 // 共通レイアウト
 .link_style_none {
   text-decoration: none;
 }
+
+
 // レスポンシブ
 
 @media (max-width: 479px) {
   @import "user/breakpoints/base";
 }
-// レスポンシブ
 @media (min-width: 480px) {
   @import "user/breakpoints/480up";
 }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= document_title %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= document_title %></title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,6 +17,8 @@
   <body>
       <%= render "staff/shared/header" %>
       <div id="container">
+       <%= content_tag(:span, flash.notice) if flash.notice %>
+       <%= content_tag(:span, flash.alert) if flash.alert %>
         <%= yield %>
       </div>
       <%= render "staff/shared/footer" %>

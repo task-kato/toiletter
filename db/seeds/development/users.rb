@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 User.create!(
   name: '加藤 匡',
   name_kana: 'カトウタスク',

@@ -1,20 +1,33 @@
-<header class="staff_header">
-  <div class="left">
-    <%= link_to staff_root_path, class: "link link_style_none" do %>
-      <span class="logo-mark">
-        <i class="fas fa-toilet-paper"></i>
-        toiletter
-      </span>
-    <% end %>
-  </div>
-  <nav class="right">
-    <ul calss="header__ul">
-      <li class="header_nav_list"><%= link_to "ログイン", "#", class: "header_link" %></li>
-      <li class="header_nav_list">
-        <%= link_to "#", class: "btn-login" do %>
-          ログイン
+<header class="staff-header">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <ul class="navbar-nav">
+        <%= link_to staff_root_path, class: "link link_style_none" do %>
+          <span class="logo-mark">
+            <i class="fas fa-toilet-paper"></i>
+            toiletter
+          </span>
         <% end %>
-      </li>
-    </ul>
+      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="header-nav-item" href="#">トイレを登録する</a>
+          </li>
+          <% unless current_staff %>
+          <li class="nav-item">
+            <%= link_to "ログイン", staff_login_path, class: "header-nav-item" %>
+          </li>
+          <% else %>
+           <li class="nav-item">
+             <%= link_to "ログアウト", staff_session_path, method: :delete, class: "header-nav-item" %>
+           </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>

@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_07_050256) do
+ActiveRecord::Schema.define(version: 2021_07_10_085555) do
+
+  create_table "staffs", charset: "utf8mb3", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "name_kana", null: false
+    t.string "nick_name", null: false
+    t.integer "gender", default: 1, null: false
+    t.string "email", null: false
+    t.string "hashed_password"
+    t.boolean "suspended", default: false, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_staffs_on_email", unique: true
+  end
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.string "name", null: false
@@ -22,7 +35,6 @@ ActiveRecord::Schema.define(version: 2021_06_07_050256) do
     t.boolean "suspended", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end

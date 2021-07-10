@@ -1,4 +1,4 @@
-table_names = %w(users)
+table_names = %w(users staffs)
 
 table_names.each do |table_name|
 
