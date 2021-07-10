@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class User::Base < ApplicationController
 
   private def current_user

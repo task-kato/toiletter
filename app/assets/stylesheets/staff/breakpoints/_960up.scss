@@ -1,19 +1,11 @@
-.staff_header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .left {
-        width: 20%;
+.staff-header {
+    .nav-item {
+        margin: 20px;
     }
+}
 
-    .right {
-        font-size: 15px;
-        width: 50%;
-        margin-top: 0px;
-        .header__ul {
-            display: flex;
-            justify-content: space-around;
-        }
+.staff-top-container {
+    .login-btn {
+        padding: 8px;
     }
 }

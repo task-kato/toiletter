@@ -2,97 +2,102 @@
 @import "shared/colors";
 @import "font-awesome";
 
-// ヘッダー
-.staff_header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: $navheight;
-    width: 100%;
-    z-index: 99;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between;
+.staff-header {
+    background-color: $gray_white;
+    .logo-mark {
+      font-family: 'Baloo Tammudu 2', cursive;
+      font-size: 30px;
+      font-weight: 700;
+      color: $navy_blue;
+    }
+  
+    .nav-item {
+      margin: 10px;
+    }
+  
+    .header-nav-item{
+      color: $navy_blue;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  
+}
 
-    // アイコン+アプリ名
-    .left {
-        font-family: 'Baloo Tammudu 2', cursive;
-        font-size: 30px;
-        width: 100%;
-        font-weight: 700;
+.staff-top-container {
+    .top-items {
+        color: $navy_blue;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
+        font-weight: 700;
 
-        .link {
-            color: $navy_blue;
+        .title {
+            font-size: clamp(12px, 2.1vw, 24px)
+        }
+        .explanation {
+            font-size: clamp(12px, 2.1vw, 24px)
         }
 
-        .logo-mark {
-            padding-top: 10px;
+        .login-btn {
             margin: 0 auto;
+            display: block;
+            width: 180px;
+            text-align: center;
+            border: 2px solid $navy_blue;
+            font-size: 16px;
             color: $navy_blue;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: .4s;
+            padding: 0px;
+            &:hover {
+                background-color: $navy_blue;
+                border-color: $navy_blue;
+                color: $gray_white;
+            }
+        }
+    }
+}
+
+// スタッフログイン画面
+.staff-login-form-container {
+    height: 400px;
+    background-color: $gray_white;
+    .staff-login-form {
+        width: 600px;
+
+
+    }
+
+    .input-group-text {
+        border: solid 1px $navy_blue;
+    }
+
+    .form-control {
+        background-color: $gray_white;
+        border: solid 1px $navy_blue;
+
+        &:focus {
+            background-color: $gray_white;
         }
     }
 
-    .right {
+
+    .btn-login {
+        color: $navy_blue;
         width: 100%;
-        margin-top: -20px;
-        font-size: 10px;
-        font-weight: bolder;
-        ul{
-            padding-left: 0px;
-            display: flex;
-            flex-flow: row;
-            justify-content: space-around;
-            list-style: none;
+        background-color: $gray_white;
+        border: solid 2px $navy_blue;
+        border-radius: 3px;
+        transition: .4s;
+        font-weight: bold;
 
-            .header_link {
-                position: relative;
-	            display: inline-block;
-                text-decoration: none;
-                color: $navy_blue;
-                transition: all .3s;
-                &:hover {
-                   transform: translateY(-5px);
-                }
-                &::after{
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    content: '';
-                    width: 0;
-                    height: 3px;
-                    background-color: $navy_blue;
-                }
-                &:hover::after{
-                    width: 100%;
-                }
-            }
-
-            .header_link {
-                display: block;
-                text-decoration: none;
-                height:35px;
-                width: 120px;
-                line-height: 37px;
-                text-align: center;
-                color: #2bb6c1;
-                border:solid 1px #2bb6c1;
-                border-radius: 20px;
-                -webkit-transition: 0.3s;
-                -moz-transition: 0.3s;
-                -o-transition: 0.3s;
-                -ms-transition: 0.3s;
-                transition: 0.3s;
-                &:hover {
-                    background: #2bb6c1;
-                    color: #fff;
-                }
-            }
-        }
+        &:hover {
+            background: $navy_blue;
+            color: $white;
+            cursor: pointer;
+          }
+        
     }
+
 }

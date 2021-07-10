@@ -10,7 +10,7 @@ class User::SessionsController < User::Base
   end
 
   def create
-    @user_login_form = User::LoginForm.new(login_params)
+    @user_login_form = User::LoginForm.new(user_login_params)
 
     if @user_login_form.email.present?
       user = User.find_by(email: @user_login_form.email)
@@ -31,10 +31,11 @@ class User::SessionsController < User::Base
 
   def destroy
     session.delete(:user_id)
+    flash.notice = 'ログアウトしました。'
     redirect_to :user_root
   end
 
-  private def login_params
+  private def user_login_params
     params.require(:user_login_form).permit(:email, :password)
   end
 

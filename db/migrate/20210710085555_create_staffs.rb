@@ -1,6 +1,6 @@
-class CreateUsers < ActiveRecord::Migration[6.1]
+class CreateStaffs < ActiveRecord::Migration[6.1]
   def change
-    create_table :users do |t|
+    create_table :staffs do |t|
       t.string :name, null: false # 名前
       t.string :name_kana, null: false # 名前（カナ）
       t.string :nick_name, null: false # ニックネーム
@@ -11,5 +11,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
 
       t.timestamps
     end
+    add_index :staffs, :email, unique: true
+
   end
 end

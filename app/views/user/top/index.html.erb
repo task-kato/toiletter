@@ -1,21 +1,22 @@
 <% @title = "利用者トップページ" %>
-<%# <h1>hello world of user</h1> %>
-
-<div class="top-page_container">
-
-  <div class="left">
-    <h1 class="title">新しいトイレの探し方、<br>初めてみませんか？</h1>
-    <p class="explanation">toiletterは新しいトイレ探索アプリです。</p>
-    <p class= "left_login-btn">
-      <%= link_to "ログインして始める", user_login_path, class: "login-btn" %>
-  　</p>
+<% unless current_user %>
+<div class="container user-top-container">  
+  <div class="row">
+    <div class="col-md-7 d-flex flex-column justify-content-around top-items">
+     <div>
+      <p class="title">新しいトイレの探し方、始めてみませんか？</p>
+      <p class="explanation">toiletterは新しいトイレ探索アプリです。</p>
+     </div>
+      <p class="login-btn-wrapper">
+        <%= link_to "ログインする", user_login_path, class: "login-btn" %>
+     </p>
+    </div>
+    <div class="col-md-5">
+     <div class="w-50 mx-auto">
+       <%= image_tag 'man_in_bathroom.png', class: "img-fluid mx-auto d-block" %>  
+     </div>
+    </div>
   </div>
-
-  <div class="right">
-    <p class="image-1">
-      <%= image_tag 'man_in_bathroom.png' %>  
-    </p>
-  </div>
-  
-  
 </div>
+<% end %>
+
