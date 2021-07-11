@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     if params[:controller] =~ %r{\A(staff|user)/}
       Regexp.last_match[1]
     else
-      'customer'
+      'user'
     end
   end
 
