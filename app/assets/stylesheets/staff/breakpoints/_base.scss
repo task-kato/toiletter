@@ -20,7 +20,6 @@
       text-decoration: none;
       font-weight: 700;
     }
-  
 }
 
 .staff-top-container {
@@ -64,9 +63,7 @@
     height: 400px;
     background-color: $gray_white;
     .staff-login-form {
-        width: 600px;
-
-
+        width: 800px;
     }
 
     .input-group-text {
@@ -97,7 +94,97 @@
             color: $white;
             cursor: pointer;
           }
-        
+    }
+}
+
+// ユーザー新規作成画面
+.staff-new-account-container {
+    background-color: $gray_white;
+
+  #staff-account-form {
+      width: 800px;
+        .input-group-text {
+            border: solid 1px $navy_blue;
+        }
+
+        .form-control {
+            background-color: $gray_white;
+            border: solid 1px $navy_blue;
+
+            &:focus {
+                background-color: $gray_white;
+            }
+        }
+
+        .btn-login {
+            color: $navy_blue;
+            width: 100%;
+            background-color: $gray_white;
+            border: solid 2px $navy_blue;
+            border-radius: 3px;
+            transition: .4s;
+            font-weight: bold;
+
+            &:hover {
+                background: $navy_blue;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// ユーザー一覧画面 staff/accounts
+
+.staff-accounts-header{
+    font-size: 12px;
+    .new-staff-account-btn {
+        font-size: 10px;
+        color: $orange;
+        background-color: $gray_white;
+        border: solid 1px $orange;
+        &:hover {
+            color: $gray_white;
+            background-color: $orange;
+        }
+    }
+}
+
+.staff-accounts-container {
+    color: $navy_blue;
+
+    .accordion-button {
+        background-color: $gray_white;
+    }
+    .accordion-button:focus {
+        box-shadow: none;
+        color: $navy_blue;
+        border-color: $navy_blue;
+        background-color: $gray_white;
+    }
+    .accordion-item {
+        background-color: $white;
     }
 
+    .edit-staff-account-btn {
+        color: $green;
+        background-color: $gray_white;
+        border: solid 1px $green;
+        &:hover {
+            background-color: $green;
+            color: $gray_white
+        }
+    }
+    .destroy-staff-account-btn {
+        color: $navy_blue;
+        background-color: $gray_white;
+        border: solid 1px $navy_blue;
+        &:hover {
+            background-color: $navy_blue;
+            color: $gray_white
+        }
+    }
 }
+
+
+

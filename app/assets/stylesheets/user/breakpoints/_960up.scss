@@ -5,7 +5,10 @@
 }
 
 .user-top-container {
-    .login-btn {
-        padding: 8px;
+    .login-btn-wrapper {
+        .login-btn {
+            padding: 8px;
+        }
+
     }
 }
