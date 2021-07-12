@@ -14,7 +14,8 @@
                         <div class="accordion-item mb-2">
                             <h2 class="accordion-header staff-account-item" id="heading<%= staff.id %>">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= staff.id %>" aria-expanded="false" aria-controls="collapse<%= staff.id %>">
-                                    <%= staff.nick_name %>
+                                    <p class="me-2 my-auto"><%= staff.nick_name %></p>
+                                    <p class="my-auto"><i class="fas fa-<%= staff.gender %>"></i></p>
                                 </button>
                             </h2>
                             <div id="collapse<%= staff.id %>" class="accordion-collapse collapse" aria-labelledby="heading<%= staff.id %>" data-bs-parent="#staff-account-accordion">

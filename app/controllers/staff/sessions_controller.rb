@@ -14,7 +14,7 @@ class Staff::SessionsController < Staff::Base
     if @staff_login_form.email.present?
       staff = Staff.find_by(email: @staff_login_form.email)
     elsif staff && staff.suspended?
-      flash.now.alert = 'アカウントが停止されています。'
+      flash[:danger] = 'アカウントが停止されています。'
       redirect_to 'new'
     end
 
@@ -23,8 +23,8 @@ class Staff::SessionsController < Staff::Base
       flash.notice = 'ログインしました。'
       redirect_to :staff_root
     else
-      flash.now.alert = 'パスワードまたはメールアドレスが間違っています。'
-      render 'new'
+      flash[:danger] = 'パスワードまたはメールアドレスが間違っています。'
+      redirect_to staff_login_path
     end
   end
 

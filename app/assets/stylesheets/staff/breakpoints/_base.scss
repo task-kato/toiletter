@@ -2,6 +2,18 @@
 @import "shared/colors";
 @import "font-awesome";
 
+// フラッシュメッセージ
+.alert-message-container {
+    .alert {
+        font-size: 8px;
+        position: fixed;
+        top: 10%;
+        right: 0%;
+        width: 30%;
+    }
+}
+
+
 .staff-header {
     background-color: $gray_white;
     .logo-mark {
@@ -137,7 +149,7 @@
 // ユーザー一覧画面 staff/accounts
 
 .staff-accounts-header{
-    font-size: 12px;
+    font-size: 15px;
     .new-staff-account-btn {
         font-size: 10px;
         color: $orange;
@@ -183,6 +195,12 @@
             background-color: $navy_blue;
             color: $gray_white
         }
+    }
+    .fa-male {
+        color: $blue;
+    }
+    .fa-female {
+        color: red;
     }
 }
 
