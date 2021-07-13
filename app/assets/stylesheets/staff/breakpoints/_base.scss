@@ -22,11 +22,11 @@
       font-weight: 700;
       color: $navy_blue;
     }
-  
+
     .nav-item {
       margin: 10px;
     }
-  
+
     .header-nav-item{
       color: $navy_blue;
       text-decoration: none;
@@ -109,7 +109,7 @@
     }
 }
 
-// ユーザー新規作成画面
+// スタッフ新規作成画面
 .staff-new-account-container {
     background-color: $gray_white;
 
@@ -146,7 +146,7 @@
     }
 }
 
-// ユーザー一覧画面 staff/accounts
+// スタッフ一覧画面 staff/accounts
 
 .staff-accounts-header{
     font-size: 15px;

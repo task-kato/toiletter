@@ -15,23 +15,23 @@ class User::SessionsController < User::Base
     if @user_login_form.email.present?
       user = User.find_by(email: @user_login_form.email)
     elsif user && user.suspended?
-      flash.now.alert = 'アカウントが停止されています。'
+      flash[:danger] = 'アカウントが停止されています。'
       redirect_to 'new'
     end
 
     if User::Authenticator.new(user).authenticate(@user_login_form.password)
       session[:user_id] = user.id
-      flash.notice = 'ログインしました！'
+      flash[:primary] = 'ログインしました！'
       redirect_to :user_root
     else
-      flash.now.alert = 'パスワードまたはメールアドレスが間違っています。'
+      flash[:danger] = 'パスワードまたはメールアドレスが間違っています。'
       render 'new'
     end
   end
 
   def destroy
     session.delete(:user_id)
-    flash.notice = 'ログアウトしました。'
+    flash[:primary] = 'ログアウトしました。'
     redirect_to :user_root
   end
 

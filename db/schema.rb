@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 2021_07_12_235659) do
   end
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "name_kana", null: false
     t.string "nick_name", null: false
     t.integer "gender", default: 1, null: false
     t.string "email", null: false

@@ -1,9 +1,7 @@
 User.create!(
-  name: '加藤 匡',
-  name_kana: 'カトウタスク',
-  nick_name: 'ちふれ',
+  nick_name: 'ユーザー',
   gender: 1,
-  email: 'kato@example.com',
+  email: 'user@example.com',
   password: 'password',
   suspended: false
 )

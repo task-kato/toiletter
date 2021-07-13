@@ -1,0 +1,56 @@
+<div class="container user-new-account-container d-flex justify-content-center mb-4">
+  <div id="user-account-form">
+    <div class="title d-flex">
+      <p class="mx-2"><i class="fas fa-user"></i></p>
+      <p>新規スタッフ作成</p>
+    </div>
+    <%= form_with model: @user, url: user_accounts_path, scope: 'user_account' do |f| %>
+        <div class="row">
+            <%= f.label :nick_name, "ニックネーム", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-signature", style="width: 16px;"></i></span>
+                <%= f.text_field :nick_name, placeholder: "ニックネームを入力", class: "form-control" %>
+            </div>
+        </div>
+        <div class="row">
+            <%= f.label :gender, "性別", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+              <div class="ms-1 me-3">
+                <%= f.label :gender_male, '男性' %>
+                <%= f.radio_button :gender, :male %>
+              </div>
+              <div>
+                <%= f.label :gender_female, '女性' %>
+                <%= f.radio_button :gender, :female %>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <%= f.label :email, "メールアドレス", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+                <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
+                <%= f.text_field :email, placeholder: "メールアドレスを入力", class: "form-control" %>
+            </div>
+        </div>
+        <div class="row">
+            <%= f.label :password, "パスワード", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                <%= f.password_field :password, placeholder: "パスワードを入力", class: "form-control" %>
+            </div>
+        </div>
+        <div class="row">
+            <%= f.label :password_confirmation, "パスワード(確認用)", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                <%= f.password_field :password_confirmation, placeholder: "パスワード(確認用)を入力", class: "form-control" %>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 login-form__group">
+                <%= f.submit "アカウント新規作成", class: "border-none btn-login" %>
+            </div>
+        </div>
+    <% end %>
+  </div>
+</div>
