@@ -196,11 +196,20 @@
             color: $gray_white
         }
     }
-    .fa-male {
-        color: $blue;
-    }
-    .fa-female {
-        color: red;
+
+    .gender-icon {
+        .fa-male {
+            color: $blue;
+        }
+        .fa-female {
+            color: $red;
+        }
+        &i {
+            display: inline-block;
+            width: 10px;
+            text-align: center;
+        }
+
     }
 }
 
