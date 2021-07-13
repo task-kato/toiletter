@@ -20,7 +20,7 @@
            <%= link_to "スタッフ一覧", staff_accounts_path, class: "header-nav-item" %>
           </li>
           <li class="nav-item">
-            <a class="header-nav-item" href="#">トイレを登録する</a>
+            <%= link_to "トイレを登録する", staff_toilets_path, class: "header-nav-item" %>
           </li>
           <% unless current_staff %>
           <li class="nav-item">
