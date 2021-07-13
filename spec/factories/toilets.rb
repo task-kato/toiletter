@@ -1,7 +1,5 @@
 FactoryBot.define do
-
-  factory :staff do
-
+  factory :toilet do
+    
   end
-
 end

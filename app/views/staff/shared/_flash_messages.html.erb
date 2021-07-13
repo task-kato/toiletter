@@ -1,0 +1,7 @@
+<div class="container alert-message-container d-flex justify-content-end text-align-center">
+    <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %> d-flex justify-content-center">
+            <%= message %>
+        </div>
+    <% end %>
+</div>

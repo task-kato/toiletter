@@ -3,9 +3,8 @@
   <div id="user-login-form">
     <div class="title d-flex">
       <p class="mx-2"><i class="fas fa-user"></i></p>
-      <p>ユーザーログイン</p> 
+      <p>ユーザーログイン</p>
     </div>
-    
 
     <%= form_with model: @user_login_form, url: :user_session do |f| %>
       <div class="row">
@@ -19,7 +18,7 @@
         <%= f.label :password, "パスワード", class: "form-label" %>
         <div class="input-group mb-3 col-sm-12">
           <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
-          <%= f.password_field :password, placeholder: "パスワードを入力", class: "form-control" %> 
+          <%= f.password_field :password, placeholder: "パスワードを入力", class: "form-control" %>
         </div>
       </div>
       <div class="row my-3">
@@ -27,8 +26,17 @@
           <%= f.submit "ログインする", class: "border-none btn-login" %>
         </div>
       </div>
-
     <% end %>
-
+      <div class="d-flex justify-content-center">
+        <p class="no-account">アカウントを持ってない？↓</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 login-form__group d-flex align-items-center text-center justify-content-center">
+          <p>
+            <%= link_to "新規作成する", new_user_account_path, class: "border-none btn-login btn-new-user-account" %>
+          </p>
+        </div>
+      </div>
   </div>
+
 </div>

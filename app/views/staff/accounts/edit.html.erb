@@ -1,0 +1,42 @@
+<div class="container staff-new-account-container d-flex justify-content-center mb-4">
+  <div id="staff-account-form">
+    <div class="title d-flex">
+      <p class="mx-2"><i class="fas fa-user"></i></p>
+      <p>スタッフ情報編集</p>
+    </div>
+    <%= form_with model: @staff, url: staff_account_path(@staff), scope: 'staff_account' do |f| %>
+        <div class="row">
+            <%= f.label :nick_name, "ニックネーム", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-signature", style="width: 16px;"></i></span>
+                <%= f.text_field :nick_name, placeholder: "ニックネームを入力", class: "form-control" %>
+            </div>
+        </div>
+        <div class="row">
+            <%= f.label :gender, "性別", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+              <div class="ms-1 me-3">
+                <%= f.label :gender_male, '男性' %>
+                <%= f.radio_button :gender, :male %>
+              </div>
+              <div>
+                <%= f.label :gender_female, '女性' %>
+                <%= f.radio_button :gender, :female %>
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <%= f.label :email, "メールアドレス", class: "form-label" %>
+            <div class="input-group mb-3 col-sm-12">
+                <span class="input-group-text" id="basic-addon1"><i class="far fa-envelope"></i></span>
+                <%= f.text_field :email, placeholder: "メールアドレスを入力", class: "form-control" %>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-sm-12 login-form__group">
+                <%= f.submit "アカウント情報更新", class: "border-none btn-login" %>
+            </div>
+        </div>
+    <% end %>
+  </div>
+</div>

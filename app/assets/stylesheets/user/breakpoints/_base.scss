@@ -1,5 +1,17 @@
 @import "shared/colors";
 
+// フラッシュメッセージ
+.alert-message-container {
+    .alert {
+        font-size: 8px;
+        position: fixed;
+        top: 10%;
+        right: 0%;
+        width: 30%;
+    }
+}
+
+// ヘッダー
 .user-header {
     .logo-mark {
       font-family: 'Baloo Tammudu 2', cursive;
@@ -7,17 +19,14 @@
       font-weight: 700;
       color: $blue;
     }
-  
     .nav-item {
       margin: 10px;
     }
-  
     .header-nav-item{
       color: $blue;
       text-decoration: none;
       font-weight: 700;
     }
-  
 }
 
 .user-top-container {
@@ -74,11 +83,64 @@
         font-weight: bold;
 
         &:hover {
-            background: $blue;
+            background-color: $blue;
             color: $white;
             cursor: pointer;
           }
-        
     }
 
+    .no-account {
+        color: $light_gray;
+    }
+
+    .btn-new-user-account {
+        display: inline-block;
+        color: $white;
+        width: 400px;
+        background-color: $blue;
+        border: solid 2px $blue;
+        border-radius: 3px;
+        transition: .4s;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $light_blue;
+            border: solid 2px $light_blue;
+        }
+    }
 }
+
+// ユーザー新規作成画面
+.user-new-account-container {
+    background-color: $white;
+
+  #user-account-form {
+      width: 800px;
+
+        .form-control {
+            background-color: $white;
+
+            &:focus {
+                background-color: $white;
+            }
+        }
+
+        .btn-login {
+            color: $blue;
+            width: 100%;
+            background-color: $white;
+            border: solid 2px $blue;
+            border-radius: 3px;
+            transition: .4s;
+            font-weight: bold;
+
+            &:hover {
+                background: $blue;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+

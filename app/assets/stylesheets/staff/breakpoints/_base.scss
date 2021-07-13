@@ -2,6 +2,18 @@
 @import "shared/colors";
 @import "font-awesome";
 
+// フラッシュメッセージ
+.alert-message-container {
+    .alert {
+        font-size: 8px;
+        position: fixed;
+        top: 10%;
+        right: 0%;
+        width: 30%;
+    }
+}
+
+
 .staff-header {
     background-color: $gray_white;
     .logo-mark {
@@ -10,17 +22,16 @@
       font-weight: 700;
       color: $navy_blue;
     }
-  
+
     .nav-item {
       margin: 10px;
     }
-  
+
     .header-nav-item{
       color: $navy_blue;
       text-decoration: none;
       font-weight: 700;
     }
-  
 }
 
 .staff-top-container {
@@ -64,9 +75,7 @@
     height: 400px;
     background-color: $gray_white;
     .staff-login-form {
-        width: 600px;
-
-
+        width: 800px;
     }
 
     .input-group-text {
@@ -97,7 +106,112 @@
             color: $white;
             cursor: pointer;
           }
-        
+    }
+}
+
+// スタッフ新規作成画面
+.staff-new-account-container {
+    background-color: $gray_white;
+
+  #staff-account-form {
+      width: 800px;
+        .input-group-text {
+            border: solid 1px $navy_blue;
+        }
+
+        .form-control {
+            background-color: $gray_white;
+            border: solid 1px $navy_blue;
+
+            &:focus {
+                background-color: $gray_white;
+            }
+        }
+
+        .btn-login {
+            color: $navy_blue;
+            width: 100%;
+            background-color: $gray_white;
+            border: solid 2px $navy_blue;
+            border-radius: 3px;
+            transition: .4s;
+            font-weight: bold;
+
+            &:hover {
+                background: $navy_blue;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// スタッフ一覧画面 staff/accounts
+
+.staff-accounts-header{
+    font-size: 15px;
+    .new-staff-account-btn {
+        font-size: 10px;
+        color: $orange;
+        background-color: $gray_white;
+        border: solid 1px $orange;
+        &:hover {
+            color: $gray_white;
+            background-color: $orange;
+        }
+    }
+}
+
+.staff-accounts-container {
+    color: $navy_blue;
+
+    .accordion-button {
+        background-color: $gray_white;
+    }
+    .accordion-button:focus {
+        box-shadow: none;
+        color: $navy_blue;
+        border-color: $navy_blue;
+        background-color: $gray_white;
+    }
+    .accordion-item {
+        background-color: $white;
     }
 
+    .edit-staff-account-btn {
+        color: $green;
+        background-color: $gray_white;
+        border: solid 1px $green;
+        &:hover {
+            background-color: $green;
+            color: $gray_white
+        }
+    }
+    .destroy-staff-account-btn {
+        color: $navy_blue;
+        background-color: $gray_white;
+        border: solid 1px $navy_blue;
+        &:hover {
+            background-color: $navy_blue;
+            color: $gray_white
+        }
+    }
+
+    .gender-icon {
+        .fa-male {
+            color: $blue;
+        }
+        .fa-female {
+            color: $red;
+        }
+        &i {
+            display: inline-block;
+            width: 10px;
+            text-align: center;
+        }
+
+    }
 }
+
+
+

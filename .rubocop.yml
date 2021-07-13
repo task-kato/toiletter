@@ -167,14 +167,14 @@ Lint/RedundantDirGlobSort:
 Lint/SymbolConversion: 
   Enabled: true 
   
-Lint/ToEnumArguments: 
-  Enabled: true 
+Lint/ToEnumArguments:
+  Enabled: true
   
 Lint/TripleQuotes:
-   Enabled: true 
+   Enabled: true
    
-Lint/UnexpectedBlockArity: 
-  Enabled: true 
+Lint/UnexpectedBlockArity:
+  Enabled: true
   
 Lint/UnmodifiedReduceAccumulator:
   Enabled: true
@@ -215,15 +215,17 @@ Style/Documentation:
 Style/AccessModifierDeclarations:
   Enabled: false
 
-Style/SafeNavigation: 
+Style/SafeNavigation:
   Enabled: false
 
 Metrics/MethodLength:
-  Enabled: false 
+  Enabled: false
 
-Metrics/AbcSize: 
+Metrics/AbcSize:
   Enabled: false
 
 RSpec/MultipleExpectations:
   Enabled: false
 
+Naming/MethodParameterName:
+  Enabled: false

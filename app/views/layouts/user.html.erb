@@ -18,8 +18,7 @@
 <%# ヘッダー切り替え %>
       <%= render "user/shared/header" %>
       <div id="container">
-       <%= content_tag(:span, flash.notice) if flash.notice %>
-       <%= content_tag(:span, flash.alert) if flash.alert %>
+       <%= render "user/shared/flash_messages" %>
         <%= yield %>
       </div>
       <%= render "user/shared/footer" %>
