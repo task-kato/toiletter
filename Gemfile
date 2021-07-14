@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'font-awesome-rails'
 gem 'bcrypt', '~> 3.1.7'
+gem 'gon'
+gem 'geocoder'
 
 group :development, :test do
 
