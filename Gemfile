@@ -16,6 +16,8 @@ gem 'font-awesome-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'gon'
 gem 'geocoder'
+gem 'nokogiri'
+gem 'kaminari'
 
 group :development, :test do
 
